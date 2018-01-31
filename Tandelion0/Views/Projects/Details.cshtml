@@ -1,0 +1,74 @@
+﻿@model Tandelion0.Models.Project
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Timeline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Timeline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoTrade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoTrade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Tandelion0.Models.Trade>
+
+@{
+    ViewBag.Title = "Trade";
+}
+
+<h2>@ViewBag.Title</h2>
+
+    <p>
+        @Html.ActionLink("Create New Tender", "Create")
+    </p>
+    <table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Project.ProjectName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TradeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoTender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Progress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+            {
+        <tbody>
+            <tr onclick="document.location = '@Url.Action( "Index", "Tenders") ';">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Project.ProjectName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TradeType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoTender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Progress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DueDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+            </tbody>
+            }
+
+    </table>
